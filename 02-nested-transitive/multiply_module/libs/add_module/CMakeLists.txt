@@ -1,5 +1,5 @@
 # Set the project name
-project (add_submodule)
+project (add_module)
 
 # Add a library with the above sources
 add_library(${PROJECT_NAME} src/add.cpp)
