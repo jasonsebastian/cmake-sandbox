@@ -1,5 +1,5 @@
-#include "multiply/multiply.h"
-#include "add/add.h"
+#include "multiply.h"
+#include "add.h"
 
 int multiply(int a, int b)
 {

@@ -1,4 +1,4 @@
-#include "subtract/subtract.h"
+#include "subtract.h"
 
 int subtract(int a, int b)
 {

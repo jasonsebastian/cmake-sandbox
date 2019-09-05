@@ -1,4 +1,4 @@
-#include "add/add.h"
+#include "add.h"
 
 int add(int a, int b)
 {

@@ -1,5 +1,5 @@
-#include "subtract/subtract.h"
-#include "multiply/multiply.h"
+#include "subtract.h"
+#include "multiply.h"
 #include<stdio.h>
 
 
