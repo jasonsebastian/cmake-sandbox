@@ -1,6 +1,6 @@
 # 02-nested-transitive
 
-The difference between this with [the structure in `01-transitive-dependencies`](../01-transitive-dependencies/CMakeLists.txt) is that now `main_module` cannot anymore depends on `add_module`.
+The difference between this with the structure in `01-transitive-dependencies` is that now `main_module` cannot anymore depends on `add_module`.
 
 Current "possible" dependency diagram
 ```
@@ -8,7 +8,7 @@ main_module -> subtract_module;
 main_module -> multiply_module;
 multiple_module -> add_module;
 ```
-If we do `#include "add.h"` in the `main.cpp` it will result an error, this is because in the `target_link_libraries` in the [`multiply_module/CMakeLists.txt`](./multiply_module/CMakeLists.txt) we put it as `PRIVATE`, means that it cannot be accessed by others.
+If we do `#include "add.h"` in the `main.cpp` it will result an error, this is because in the `target_link_libraries` in the [`multiply_module/CMakeLists.txt`](multiply_module/CMakeLists.txt) we put it as `PRIVATE`, means that it cannot be accessed by others.
 
 Notice now also that we have changed the file structure a bit such that `add_module` is completely inside the `multiply_module/libs` implying that other should not have access to this.
 ```
