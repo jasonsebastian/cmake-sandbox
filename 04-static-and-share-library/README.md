@@ -9,55 +9,6 @@ build
 ├── CMakeCache.txt
 ├── CMakeFiles
 │   ├── 3.15.2
-│   │   ├── CMakeCCompiler.cmake
-│   │   ├── CMakeCXXCompiler.cmake
-│   │   ├── CMakeDetermineCompilerABI_C.bin
-│   │   ├── CMakeDetermineCompilerABI_CXX.bin
-│   │   ├── CMakeSystem.cmake
-│   │   ├── CompilerIdC
-│   │   └── CompilerIdCXX
-│   ├── CMakeDirectoryInformation.cmake
-│   ├── CMakeOutput.log
-│   ├── CMakeTmp
-│   ├── Makefile.cmake
-│   ├── Makefile2
-│   ├── TargetDirectories.txt
-│   ├── cmake.check_cache
-│   └── progress.marks
-├── Makefile
-├── add_module
-│   ├── CMakeFiles
-│   │   ├── CMakeDirectoryInformation.cmake
-│   │   ├── add_module.dir
-│   │   └── progress.marks
-│   ├── Makefile
-│   ├── cmake_install.cmake
-│   └── libadd_module.a
-├── cmake_install.cmake
-├── main_module
-│   ├── CMakeFiles
-│   │   ├── CMakeDirectoryInformation.cmake
-│   │   ├── main_module.dir
-│   │   └── progress.marks
-│   ├── Makefile
-│   ├── cmake_install.cmake
-│   └── main_module
-└── subtract_module
-    ├── CMakeFiles
-    │   ├── CMakeDirectoryInformation.cmake
-    │   ├── progress.marks
-    │   └── subtract_module.dir
-    ├── Makefile
-    ├── cmake_install.cmake
-    └── libsubtract_module.dylib
-
-14 directories, 30 files
-
- ...02-sub-projects/B-cyt/04-static-and-share-library   master ✘ ✹ ✭  $ tree build -L 2
-build
-├── CMakeCache.txt
-├── CMakeFiles
-│   ├── 3.15.2
 │   ├── CMakeDirectoryInformation.cmake
 │   ├── CMakeOutput.log
 │   ├── CMakeTmp
