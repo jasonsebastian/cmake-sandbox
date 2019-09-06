@@ -8,6 +8,7 @@ And though it contains some explanation about the code, it does not aim to be in
 - [x] 01-transitive-dependencies
 - [x] 02-nested-transitive
 - [x] 03-import-from-faraway
+- [x] 04-static-and-shared-library
 - [ ] build-other-languages
 - [ ] dependency-manager
 - [ ] compiler-and-toolchain-versions
