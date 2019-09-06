@@ -31,3 +31,33 @@ To run the `HelloWorld` class (surely after the build), we can do
 cd build/bin
 java -cp add_module.jar:main_module.jar main_module.HelloWorld
 ```
+
+Resulting build directory tree
+```
+build
+├── CMakeCache.txt
+├── CMakeFiles
+│   ├── 3.15.2
+│   ├── CMakeDirectoryInformation.cmake
+│   ├── CMakeOutput.log
+│   ├── CMakeRuleHashes.txt
+│   ├── CMakeTmp
+│   ├── Makefile.cmake
+│   ├── Makefile2
+│   ├── TargetDirectories.txt
+│   ├── cmake.check_cache
+│   └── progress.marks
+├── Makefile
+├── add_module
+│   ├── CMakeFiles
+│   ├── Makefile
+│   └── cmake_install.cmake
+├── bin
+│   ├── add_module.jar
+│   └── main_module.jar
+├── cmake_install.cmake
+└── main_module
+    ├── CMakeFiles
+    ├── Makefile
+    └── cmake_install.cmake
+```
