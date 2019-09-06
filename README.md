@@ -12,3 +12,4 @@ And though it contains some explanation about the code, it does not aim to be in
 - [ ] build-other-languages
 - [ ] dependency-manager
 - [ ] compiler-and-toolchain-versions
+- [ ] testing
