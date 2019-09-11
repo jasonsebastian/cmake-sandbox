@@ -10,6 +10,6 @@ And though it contains some explanation about the code, it does not aim to be in
 - [x] 03-import-from-faraway
 - [x] 04-static-and-shared-library
 - [ ] build-other-languages (WIP)
-- [ ] dependency-manager
+- [ ] dependency-manager (WIP)
 - [ ] compiler-and-toolchain-versions
 - [ ] testing
