@@ -13,7 +13,8 @@ Four possible scenario to look at:
 - [x] open source software to be compiled from source
 - [ ] compiled (download binary) of a open source software
 - [ ] closed source software to be compiled from source
-- [ ] compiled (download binary) of a closed source software
+- [x] compiled (download binary) of a closed source software
+- [ ] compiled (download binary) of a closed source software for multiple OS and toolchains.
 
 ## Discussion regarding binary download
 
