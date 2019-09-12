@@ -23,10 +23,6 @@ HunterGate(
 
 project (add_module)
 
-# need to unset proxy because the proxy will redirect to authentication for http access, 
-#   and the proxy is actually not needed for localhost
-set(ENV{http_proxy} "")
-
 hunter_add_package(half)
 find_package(half CONFIG REQUIRED)
 add_executable(foo main.cpp)

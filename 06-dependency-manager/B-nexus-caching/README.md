@@ -22,3 +22,6 @@ One biggest concern in using hunter is that most likely we will need the nexus r
 
 The other thing is that currently the package (in this case `half`) is already hunterized and managed by hunter.
 We shall try on how to use our own library.
+
+## Proxy
+You may need to bypass proxy (if you have) for `localhost` by `export no_proxy="localhost"

@@ -16,13 +16,8 @@ nexuser=admin
 nexpwd=admin123
 
 echo "[upload to nexus]"
-tmp_http_proxy=$http_proxy
-http_proxy=""
-
 pushd ~/.hunter/_Base/Cache/meta
     find ./ -type f -exec curl -u $nexuser:$nexpwd --upload-file "{}" "$CACHE_REPOSITORY_URL/meta/{}" \;
     cd ../raw
     find ./ -type f -exec curl -u $nexuser:$nexpwd --upload-file "{}" "$CACHE_REPOSITORY_URL/raw/{}" \;
 popd
-
-http_proxy=tmp_http_proxy
