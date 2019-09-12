@@ -11,9 +11,9 @@ Based on the reason well explained in [this blog](https://geokon-gh.github.io/hu
 ## Todo
 Four possible scenario to look at:
 - [x] open source software to be compiled from source
-- [ ] compiled (download binary) of a open source software
-- [ ] closed source software to be compiled from source
-- [x] compiled (download binary) of a closed source software
+- [x] compiled (download binary) of a open source software
+- [x] closed source software to be compiled from source
+- [ ] compiled (download binary) of a closed source software (custom repository)
 - [ ] compiled (download binary) of a closed source software for multiple OS and toolchains.
 
 ## Discussion regarding binary download

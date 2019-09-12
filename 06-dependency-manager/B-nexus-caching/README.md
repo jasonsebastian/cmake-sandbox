@@ -19,3 +19,6 @@ sh build_from_cache.sh
 
 ## Discussion
 One biggest concern in using hunter is that most likely we will need the nexus repository binaries to be organized by hunter itself (the hunter to be run on Jenkins).
+
+The other thing is that currently the package (in this case `half`) is already hunterized and managed by hunter.
+We shall try on how to use our own library.
