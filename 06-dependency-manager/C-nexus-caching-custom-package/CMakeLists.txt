@@ -17,13 +17,12 @@ set(
 
 include("cmake/HunterGate.cmake")
 HunterGate(
-    URL "https://github.com/kwinata/hunter/archive/v0.23.215.tar.gz"
-    SHA1 "0a222455d7ae75f5c08cbeb773c9d831e61ba8e3"
+    URL "https://github.com/kwinata/hunter/archive/master.zip"
+    SHA1 a81c5203c4e580a5a77a38a22cfa07b244ac1ff4
 )
 
 project(main_module)
 
-hunter_add_package(add_module)
-find_package(add_module CONFIG REQUIRED)
+hunter_add_package(dummy-cmake-project)
+find_package(dummy-cmake-project CONFIG REQUIRED)
 add_executable(foo main.cpp)
-target_link_libraries(foo add_module::add_module)
