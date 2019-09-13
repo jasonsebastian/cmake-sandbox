@@ -1,5 +1,5 @@
-#ifndef __GPERF_HPP__
-#define __GPERF_HPP__
+#ifndef __SUBTRACT_H__
+#define __SUBTRACT_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -11,4 +11,4 @@ int subtract(int a, int b);
 }
 #endif
 
-#endif //__GPERF_HPP__
+#endif //__SUBTRACT_H__
