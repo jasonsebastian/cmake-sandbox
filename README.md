@@ -1,8 +1,8 @@
 # cmake-sandbox
 
-This repository contains a snapshot of projects, for the purpose of studying how to compile C/C++ libraries for usage on different platforms (Android, iOS, MacOS, Linux, Windows).
+This repository contain snapshots of project folders, for the purpose of studying how to compile C/C++ libraries for usage on different platforms (Android, iOS, MacOS, Linux, Windows).
 
-The goal is to standardize and combine the sample apps from different platforms to be put under the same project folder.
+The goal is to be able to put sample apps from different platforms under the same project folder and to standardize the structure across different projects.
 
 ## Proposed project structure
 
