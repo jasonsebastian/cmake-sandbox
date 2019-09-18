@@ -3,7 +3,7 @@ project(calc)
 
 OPTION(BUILD_EXAMPLES "Build library usage example apps" ON)
 
-add_library(calc src/add.c src/subtract.c src/multiply.c)
+add_library(calc STATIC src/add.c src/subtract.c src/multiply.c)
 
 target_include_directories(calc
     PUBLIC ${PROJECT_SOURCE_DIR}/include
