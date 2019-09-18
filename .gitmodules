@@ -4,3 +4,6 @@
 [submodule "06-dependency-manager/C-nexus-caching-custom-package/dummy-cmake-project"]
 	path = 06-dependency-manager/C-nexus-caching-custom-package/dummy-cmake-project
 	url = https://github.com/kwinata/dummy-cmake-project
+[submodule "06-dependency-manager/cmake-sandbox"]
+	path = jasonsebastian-cmake-sandbox
+	url = https://github.com/jasonsebastian/cmake-sandbox
