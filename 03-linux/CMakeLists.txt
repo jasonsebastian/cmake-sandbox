@@ -11,5 +11,4 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     set_target_properties(calc
         PROPERTIES
         LIBRARY_OUTPUT_DIRECTORY ${distribution_DIR}/linux)
-    add_subdirectory(examples)
 endif()
