@@ -37,6 +37,4 @@ Description of project structure:
 
 ## Updates so far
 
-All projects under `01-android` will work only when using NDK whose revision is less than or equal to r18b.
-
-I am not sure whether running `cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++` and run the generated executable is considered sufficient for MacOS requirements.
+To run `cmake` using `-DCMAKE_SYSTEM_NAME=Android`, `$ANDROID_NDK` environment variable must exist and it must point to NDK whose revision is less than or equal to r18b.
