@@ -1,0 +1,1 @@
+# CMakeLists.txt is empty because Gradle, not cmake, which handles the build process of the Android sample application.
