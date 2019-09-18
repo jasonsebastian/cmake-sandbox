@@ -16,7 +16,7 @@ The goal is to be able to put sample apps from different platforms under the sam
 │   ├── ios/
 │   ├── macos/
 │   ├── linux/
-│   ├── windows/
+│   └── windows/
 ├── examples/
 │   ├── android/
 │   ├── ios/
