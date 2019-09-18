@@ -10,14 +10,12 @@ Based on the reason well explained in [this blog](https://geokon-gh.github.io/hu
 
 ## Todo
 Four possible scenario to look at:
-- [x] open source software to be compiled from source
-- [x] compiled (download binary) of a open source software
-- [x] closed source software to be compiled from source
-- [ ] compiled (download binary) of a closed source software (custom repository)
-- [ ] compiled (download binary) of a closed source software for multiple OS and toolchains.
+- [x] open source software to be compiled from source (see A-open-from-source)
+- [x] use cached binary of open source (B-nexus-caching)
+- [ ] fetch closed source software by custom huntergate (WIP: difficulty in hunterizing the package)
+- [ ] cache and use different builds (different configurations)
 
 ## Discussion regarding binary download
-
 Precompiled binary download as dependency can actually be seen from other perspectives, that is seeing it as download from a 'cache'.
 Actually, that's what we exactly do when we get the cached dependency from `HUNTER_ROOT`.
 In [Ruslan's comment](https://github.com/ruslo/hunter/issues/75#issue-69407135):
