@@ -7,7 +7,16 @@ The goal is to be able to put sample apps from different platforms under the sam
 ## Proposed project structure
 
 ```bash
-├── build/
+├── distribution/
+│   ├── android/
+│   │   ├── arm64-v8a/
+│   │   ├── armeabi-v7a/
+│   │   ├── x86/
+│   │   └── x86_64/
+│   ├── ios/
+│   ├── macos/
+│   ├── linux/
+│   ├── windows/
 ├── examples/
 │   ├── android/
 │   ├── ios/
@@ -21,17 +30,10 @@ The goal is to be able to put sample apps from different platforms under the sam
 ```
 
 Description of project structure:
-* `example/` contains source code for sample app of the different platforms. Each of these sample apps will be able to link to the generated library file under `build/`.
+* `distribution/` contains the library files compiled to different platforms.
+* `examples/` contains source code for sample app of the different platforms. Each of these sample apps will be able to link to the generated library file under `distribution/`.
 * `include/` contains the header files. Sample app must include these header files in order to use the library.
 * `src/` contains the source code.
-
-Run the following commands
-```bash
-mkdir build && cd build
-cmake ..
-cmake --build .
-```
-to generate library and place it under `build/`.
 
 ## Updates so far
 
