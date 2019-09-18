@@ -2,8 +2,9 @@ if [ -d "build" ]; then
     rm -rf build
 fi
 
+mkdir build && cd build
+
 build_for_android() {
-    mkdir build && cd build
     for arch in armeabi-v7a arm64-v8a x86 x86_64; do
         mkdir $arch
         pushd $arch
@@ -16,7 +17,6 @@ build_for_android() {
 }
 
 build_for_macos() {
-    mkdir build && cd build
     cmake .. -DCMAKE_SYSTEM_NAME=Darwin
     cmake --build .
 }
