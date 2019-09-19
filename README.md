@@ -1,6 +1,6 @@
 # cmake-sandbox
 
-This repository contain snapshots of project folders, for the purpose of studying how to compile C/C++ libraries for usage on different platforms (Android, iOS, MacOS, Linux, Windows).
+This repository contain snapshots of project folders, for the purpose of studying how to compile C/C++ libraries for usage on different platforms (Android, iOS, Linux, MacOS, Windows).
 
 The goal is to be able to put sample apps from different platforms under the same project folder and to standardize the structure across different projects.
 
@@ -14,14 +14,14 @@ The goal is to be able to put sample apps from different platforms under the sam
 │   │   ├── x86/
 │   │   └── x86_64/
 │   ├── ios/
-│   ├── macos/
 │   ├── linux/
+│   ├── macos/
 │   └── windows/
 ├── examples/
 │   ├── android/
 │   ├── ios/
-│   ├── macos/
 │   ├── linux/
+│   ├── macos/
 │   ├── windows/
 │   └── CMakeLists.txt
 ├── include/
