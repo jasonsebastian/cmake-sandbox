@@ -21,4 +21,26 @@ build_for_macos() {
     cmake --build .
 }
 
-build_for_android
+build_for_linux() {
+    cmake .. -DCMAKE_SYSTEM_NAME=Linux \
+        -DCMAKE_SYSTEM_PROCESSOR=arm
+    cmake --build .
+}
+
+if [ $# -eq 0 ]; then
+    echo "Usage: ./build.sh <compile_target>"
+else
+    case $1 in
+        android)
+            build_for_android
+            ;;
+        macos)
+            build_for_macos
+            ;;
+        linux)
+            build_for_linux
+            ;;
+        *)
+            echo "Compile target not recognized"
+    esac
+fi
