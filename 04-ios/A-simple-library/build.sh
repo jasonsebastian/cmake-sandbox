@@ -12,4 +12,15 @@ build_for_ios() {
     cmake --build .
 }
 
-build_for_ios
+if [ $# -eq 0 ]; then
+    echo "Usage: ./build.sh <compile_target>"
+else
+    case $1 in
+    ios)
+        build_for_ios
+        ;;
+    *)
+        echo "Compile target not recognized"
+        ;;
+    esac
+fi
