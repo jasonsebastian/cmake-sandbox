@@ -1,5 +1,6 @@
 # Cross platform
 
-When building for Android and MacOS, make sure `build.sh` is invoking the appropriate macro and run `./build.sh`.
-
-When building for Linux, make sure Docker is running, make sure `build.sh` is invoking `build_for_linux` macro and run `docker build -t sandbox-linux .`.
+Build:
+* When building for Android, run `./build.sh android`.
+* When building for MacOS, run `./build.sh macos`.
+* When building for Linux, make sure Docker is running and run `docker build -t sandbox-linux .`.
