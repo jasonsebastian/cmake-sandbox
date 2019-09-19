@@ -1,5 +1,7 @@
 # Simple library
 
+This project compiles shared library for Linux, using Docker to containerize the build process.
+
 To check whether Docker is running:
 
 ```bash
