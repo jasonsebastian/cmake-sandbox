@@ -35,6 +35,6 @@ Description of project structure:
 * `include/` contains the header files. Sample app must include these header files in order to use the library.
 * `src/` contains the source code.
 
-## Updates so far
+## Constraints
 
-To run `cmake` using `-DCMAKE_SYSTEM_NAME=Android`, `$ANDROID_NDK` environment variable must exist and it must point to NDK whose revision is less than or equal to r18b.
+When building for Android, `$ANDROID_NDK` environment variable must exist and it must point to NDK whose revision is less than or equal to r18b.
