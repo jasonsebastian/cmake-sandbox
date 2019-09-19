@@ -10,5 +10,11 @@ To run this project, run the following commands:
 
 ```bash
 docker build -t sandbox-linux .
-docker run sandbox-linux
+docker run -it sandbox-linux /bin/bash
+```
+
+To remove all exited containers, run the following commands:
+
+```bash
+docker rm $(docker ps -a -f status=exited -q)
 ```
