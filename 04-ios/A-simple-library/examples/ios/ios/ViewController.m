@@ -2,7 +2,7 @@
 //  ViewController.m
 //  ios
 //
-//  Created by Jason Sebastian on 9/19/19.
+//  Created by Jason Sebastian on 9/20/19.
 //  Copyright © 2019 Jason Sebastian. All rights reserved.
 //
 
@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSMutableString *message = [[NSMutableString alloc] init];
+    [message appendString:@"add(1, 2) = "];
+    int result = 1 + 2;
+    [message appendString:[NSString stringWithFormat:@"%i", result]];
+    
+    self.textView.text = message;
 }
 
 

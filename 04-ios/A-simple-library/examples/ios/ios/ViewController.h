@@ -2,7 +2,7 @@
 //  ViewController.h
 //  ios
 //
-//  Created by Jason Sebastian on 9/19/19.
+//  Created by Jason Sebastian on 9/20/19.
 //  Copyright © 2019 Jason Sebastian. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
