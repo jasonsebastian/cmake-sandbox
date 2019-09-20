@@ -1,4 +1,4 @@
-# Simple library
+# Static library
 
 This project compiles shared library for Linux, using Docker to containerize the build process.
 
