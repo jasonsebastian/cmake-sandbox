@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 project(calc)
 
-set(distribution_DIR ${PROJECT_SOURCE_DIR}/../distribution)
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+set(distribution_DIR dists)
 
 add_library(calc SHARED src/add.c src/subtract.c)
 target_include_directories(calc

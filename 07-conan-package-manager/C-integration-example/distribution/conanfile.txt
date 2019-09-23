@@ -1,0 +1,6 @@
+[requires]
+calc/0.1@kevin/dev
+
+[imports]
+include, * -> ./include
+lib, * -> ./lib
