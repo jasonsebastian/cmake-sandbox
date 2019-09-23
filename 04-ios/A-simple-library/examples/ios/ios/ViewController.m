@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "add.h"
 
 @interface ViewController ()
 
@@ -19,8 +20,7 @@
     
     NSMutableString *message = [[NSMutableString alloc] init];
     [message appendString:@"add(1, 2) = "];
-    int result = 1 + 2;
-    [message appendString:[NSString stringWithFormat:@"%i", result]];
+    [message appendString:[NSString stringWithFormat:@"%i", add(1, 2)]];
     
     self.textView.text = message;
 }

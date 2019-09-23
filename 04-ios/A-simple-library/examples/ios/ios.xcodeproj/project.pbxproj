@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964B7BC52338AC4C0057D9DC /* add.c in Sources */ = {isa = PBXBuildFile; fileRef = 964B7BC32338AC4C0057D9DC /* add.c */; };
 		965047D323349CD800FF6F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 965047D223349CD800FF6F04 /* AppDelegate.m */; };
 		965047D623349CD800FF6F04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965047D523349CD800FF6F04 /* ViewController.m */; };
 		965047D923349CD800FF6F04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965047D723349CD800FF6F04 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		964B7BC32338AC4C0057D9DC /* add.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = add.c; sourceTree = "<group>"; };
+		964B7BC42338AC4C0057D9DC /* add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = add.h; sourceTree = "<group>"; };
 		965047CE23349CD800FF6F04 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965047D123349CD800FF6F04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		965047D223349CD800FF6F04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				965047DC23349CF600FF6F04 /* LaunchScreen.storyboard */,
 				965047DF23349CF600FF6F04 /* Info.plist */,
 				965047E023349CF600FF6F04 /* main.m */,
+				964B7BC32338AC4C0057D9DC /* add.c */,
+				964B7BC42338AC4C0057D9DC /* add.h */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				965047D623349CD800FF6F04 /* ViewController.m in Sources */,
 				965047E123349CF600FF6F04 /* main.m in Sources */,
 				965047D323349CD800FF6F04 /* AppDelegate.m in Sources */,
+				964B7BC52338AC4C0057D9DC /* add.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
