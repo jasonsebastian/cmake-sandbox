@@ -7,18 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		964B7BC52338AC4C0057D9DC /* add.c in Sources */ = {isa = PBXBuildFile; fileRef = 964B7BC32338AC4C0057D9DC /* add.c */; };
 		965047D323349CD800FF6F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 965047D223349CD800FF6F04 /* AppDelegate.m */; };
 		965047D623349CD800FF6F04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965047D523349CD800FF6F04 /* ViewController.m */; };
 		965047D923349CD800FF6F04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965047D723349CD800FF6F04 /* Main.storyboard */; };
 		965047DB23349CF600FF6F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965047DA23349CF600FF6F04 /* Assets.xcassets */; };
 		965047DE23349CF600FF6F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965047DC23349CF600FF6F04 /* LaunchScreen.storyboard */; };
 		965047E123349CF600FF6F04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 965047E023349CF600FF6F04 /* main.m */; };
+		96C5A81D233A061800488B00 /* libcalc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C5A81B233A021600488B00 /* libcalc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		964B7BC32338AC4C0057D9DC /* add.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = add.c; sourceTree = "<group>"; };
-		964B7BC42338AC4C0057D9DC /* add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = add.h; sourceTree = "<group>"; };
 		965047CE23349CD800FF6F04 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965047D123349CD800FF6F04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		965047D223349CD800FF6F04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +27,7 @@
 		965047DD23349CF600FF6F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		965047DF23349CF600FF6F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		965047E023349CF600FF6F04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96C5A81B233A021600488B00 /* libcalc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcalc.a; path = ../../distribution/ios/Debug/libcalc.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C5A81D233A061800488B00 /* libcalc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +47,7 @@
 			children = (
 				965047D023349CD800FF6F04 /* ios */,
 				965047CF23349CD800FF6F04 /* Products */,
+				96C5A81A233A021600488B00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,10 +71,16 @@
 				965047DC23349CF600FF6F04 /* LaunchScreen.storyboard */,
 				965047DF23349CF600FF6F04 /* Info.plist */,
 				965047E023349CF600FF6F04 /* main.m */,
-				964B7BC32338AC4C0057D9DC /* add.c */,
-				964B7BC42338AC4C0057D9DC /* add.h */,
 			);
 			path = ios;
+			sourceTree = "<group>";
+		};
+		96C5A81A233A021600488B00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96C5A81B233A021600488B00 /* libcalc.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +156,6 @@
 				965047D623349CD800FF6F04 /* ViewController.m in Sources */,
 				965047E123349CF600FF6F04 /* main.m in Sources */,
 				965047D323349CD800FF6F04 /* AppDelegate.m in Sources */,
-				964B7BC52338AC4C0057D9DC /* add.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +297,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5YZ8QW4LUV;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../include";
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../distribution/ios/Debug";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,11 +316,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5YZ8QW4LUV;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../include";
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../distribution/ios/Debug";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
