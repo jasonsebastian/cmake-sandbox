@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.4.1)
 
-set(include_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../../../../include)
-set(distribution_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../../../../distribution/android)
+set(include_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../libs/include)
+set(distribution_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../libs/)
 
 add_library(calc-lib SHARED IMPORTED)
 set_target_properties(calc-lib PROPERTIES IMPORTED_LOCATION
