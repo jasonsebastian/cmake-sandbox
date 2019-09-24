@@ -33,21 +33,23 @@ android {
     }
 }
 
-dependencies {
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-}
+//dependencies {
+//    implementation 'androidx.appcompat:appcompat:1.1.0'
+//}
+//
+//task fetch_conan(type:Exec) {
+//    workingDir 'libs'
+//    println android.getProperties().toString()
+//    commandLine 'conan', 'install', '.', '-s', 'os=Android', '-s', 'os.api_level=23', '-s', 'arch=armv7', '--build', 'missing'
+//    commandLine 'conan', 'install', '.', '-s', 'os=Android', '-s', 'os.api_level=23', '-s', 'arch=armv8', '--build', 'missing'
+//    commandLine 'conan', 'install', '.', '-s', 'os=Android', '-s', 'os.api_level=23', '-s', 'arch=x86', '--build', 'missing'
+////    commandLine 'conan', 'install', '.', '-s', 'os=Android', '-s', 'os.api_level=23', '-s', 'arch=x86_64', '--build', 'missing'
+//
+//}
 
-task fetch_conan(type:Exec) {
-    workingDir 'libs'
-
-    commandLine 'conan', 'install', '.', '-p', 'profile', '--build', 'missing'
-
-
-}
-
-
-tasks.whenTaskAdded { task ->
-    if (task.name == 'externalNativeBuildRelease' || task.name == 'externalNativeBuildDebug') {
-        task.dependsOn "fetch_conan"
-    }
-}
+//
+//tasks.whenTaskAdded { task ->
+//    if (task.name == 'externalNativeBuildRelease' || task.name == 'externalNativeBuildDebug') {
+//        task.dependsOn "fetch_conan"
+//    }
+//}

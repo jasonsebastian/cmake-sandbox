@@ -3,7 +3,7 @@ import os
 
 class CalcConan(ConanFile):
     name = "calc"
-    version = "0.1"
+    version = "0.1.2"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
     default_options = "shared=False"
@@ -16,12 +16,15 @@ class CalcConan(ConanFile):
             self.settings.compiler='clang'
             self.settings.compiler.version='7.0'
             self.settings.compiler.libcxx='c++_static'
+            self.android_abi = tools.to_android_abi(self.settings.arch)
 
     def build(self):
         cmake = CMake(self)
 
         if self.settings.os == 'Android':
-            # cmake.definitions["CMAKE_ANDROID_STL_TYPE"] = "c++_static"
+            print(self.android_abi)
+            cmake.definitions["ANDROID_ABI"] = self.android_abi
+            cmake.definitions["CMAKE_ANDROID_ARCH_ABI"] = self.android_abi
             cmake.definitions["CMAKE_ANDROID_NDK"] = "/Users/kevin/Library/Android/android-ndk-r18b/"
         elif self.settings.os == 'Linux':
             cmake.definitions["CMAKE_SYSTEM_PROCESSOR"] = "arm"
@@ -29,10 +32,6 @@ class CalcConan(ConanFile):
             raise ValueError("Currently we only support build for Android, Linux, and Macos")
 
         cmake.configure(source_folder="calc/")
-
-        # save for usage in imports()
-        self.android_abi = cmake.definitions["ANDROID_ABI"]
-        
         cmake.build()
 
     def package(self):
@@ -46,4 +45,3 @@ class CalcConan(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = ["calc"]
-
