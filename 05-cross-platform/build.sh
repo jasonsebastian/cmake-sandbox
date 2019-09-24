@@ -2,16 +2,21 @@ clean() {
     if [ -d "build" ]; then
         rm -rf build
     fi
-    mkdir build && cd build
+    mkdir build
+    if [ -d "distribution" ]; then
+        rm -rf distribution
+    fi
+    mkdir distribution
 }
 
 build_for_android() {
     clean
-    for arch in armeabi-v7a arm64-v8a x86 x86_64; do
-        mkdir $arch
-        pushd $arch
+    cd build
+    for ARCH in armeabi-v7a arm64-v8a x86 x86_64; do
+        mkdir $ARCH
+        pushd $ARCH
         cmake ../.. -DCMAKE_SYSTEM_NAME=Android \
-            -DCMAKE_ANDROID_ARCH_ABI=$arch \
+            -DCMAKE_ANDROID_ARCH_ABI=$ARCH \
             -DCMAKE_ANDROID_STL_TYPE=c++_static
         cmake --build .
         popd
@@ -20,12 +25,14 @@ build_for_android() {
 
 build_for_macos() {
     clean
+    cd build
     cmake .. -DCMAKE_SYSTEM_NAME=Darwin
     cmake --build .
 }
 
 build_for_linux() {
     clean
+    cd build
     cmake .. -DCMAKE_SYSTEM_NAME=Linux \
         -DCMAKE_SYSTEM_PROCESSOR=arm
     cmake --build .
