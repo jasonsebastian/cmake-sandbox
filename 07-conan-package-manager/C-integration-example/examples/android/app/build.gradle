@@ -36,3 +36,18 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }
+
+task fetch_conan(type:Exec) {
+    workingDir 'libs'
+
+    commandLine 'conan', 'install', '.', '-p', 'profile', '--build', 'missing'
+
+
+}
+
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'externalNativeBuildRelease' || task.name == 'externalNativeBuildDebug') {
+        task.dependsOn "fetch_conan"
+    }
+}
