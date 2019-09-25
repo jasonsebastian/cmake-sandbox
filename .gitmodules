@@ -1,6 +1,0 @@
-[submodule "06-dependency-manager/C-nexus-caching-custom-package/hunter"]
-	path = 06-dependency-manager/C-nexus-caching-custom-package/hunter
-	url = https://github.com/kwinata/hunter
-[submodule "06-dependency-manager/C-nexus-caching-custom-package/dummy-cmake-project"]
-	path = 06-dependency-manager/C-nexus-caching-custom-package/dummy-cmake-project
-	url = https://github.com/kwinata/dummy-cmake-project
