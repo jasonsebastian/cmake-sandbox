@@ -1,4 +1,4 @@
-# Simple library
+# Static library
 
 To be able to link against pre-built libraries, the `.xcodeproj` file under iOS example app needs to be configured as such:
 * Under `Build Settings`, insert additional paths for Library Search Paths and Header Search Paths.
