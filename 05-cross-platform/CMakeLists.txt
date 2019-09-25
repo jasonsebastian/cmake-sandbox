@@ -17,6 +17,10 @@ elseif (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
     set_target_properties(calc
         PROPERTIES
         LIBRARY_OUTPUT_DIRECTORY ${distribution_DIR}/macos)
+elseif (CMAKE_SYSTEM_NAME STREQUAL "iOS")
+    set_target_properties(calc
+        PROPERTIES
+        LIBRARY_OUTPUT_DIRECTORY ${distribution_DIR}/ios)
 elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     set_target_properties(calc
         PROPERTIES
