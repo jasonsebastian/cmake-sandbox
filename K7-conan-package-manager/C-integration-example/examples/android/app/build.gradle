@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.android"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_STL=c++_static'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['../../../distribution/android']
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+}
+
+//dependencies {
+//    implementation 'androidx.appcompat:appcompat:1.1.0'
+//}
+//
+//task fetch_conan(type:Exec) {
+//    workingDir 'libs'
+//    println android.getProperties().toString()
+//    commandLine 'conan', 'install', '.', '-s', 'os=Android', '-s', 'os.api_level=23', '-s', 'arch=armv7', '--build', 'missing'
+//    commandLine 'conan', 'install', '.', '-s', 'os=Android', '-s', 'os.api_level=23', '-s', 'arch=armv8', '--build', 'missing'
+//    commandLine 'conan', 'install', '.', '-s', 'os=Android', '-s', 'os.api_level=23', '-s', 'arch=x86', '--build', 'missing'
+////    commandLine 'conan', 'install', '.', '-s', 'os=Android', '-s', 'os.api_level=23', '-s', 'arch=x86_64', '--build', 'missing'
+//
+//}
+
+//
+//tasks.whenTaskAdded { task ->
+//    if (task.name == 'externalNativeBuildRelease' || task.name == 'externalNativeBuildDebug') {
+//        task.dependsOn "fetch_conan"
+//    }
+//}
