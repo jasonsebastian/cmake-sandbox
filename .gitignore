@@ -1,4 +1,3 @@
-.DS_Store
 .classpath
 .idea
 .project
@@ -6,3 +5,9 @@
 .vscode
 build
 distribution
+
+# cmake build directory
+**/build
+**/_builds
+
+**/.DS_Store
