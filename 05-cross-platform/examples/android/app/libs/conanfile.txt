@@ -1,0 +1,6 @@
+[requires]
+calc/0.1.2@kevin/dev
+
+[imports]
+include, *.h -> ./include
+android, *.so -> ./
