@@ -1,7 +1,20 @@
 cmake_minimum_required(VERSION 3.4.1)
 
-set(include_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../../../../include)
-set(distribution_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../../../../distribution/android)
+set(distribution_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../libs/)
+set(include_DIR ${distribution_DIR}/include)
+
+if(${ANDROID_ABI} STREQUAL "armeabi-v7a")
+    set(conan_arch armv7)
+elseif(${ANDROID_ABI} STREQUAL "arm64-v8a")
+    set(conan_arch armv8)
+else()
+    set(conan_arch ${ANDROID_ABI})
+endif()
+
+execute_process(
+    COMMAND conan install . -s os=Android -s os.api_level=23 -s arch=${conan_arch} -o calc:shared=True --build missing
+    WORKING_DIRECTORY ${distribution_DIR}
+)
 
 add_library(calc-lib SHARED IMPORTED)
 set_target_properties(calc-lib PROPERTIES IMPORTED_LOCATION

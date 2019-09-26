@@ -23,7 +23,7 @@ android {
     }
     sourceSets {
         main {
-            jniLibs.srcDirs = ['../../../distribution/android']
+            jniLibs.srcDirs = ['libs']
         }
     }
     externalNativeBuild {
@@ -35,4 +35,5 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'junit:junit:4.12'
 }

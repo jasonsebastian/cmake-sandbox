@@ -1,5 +1,5 @@
 [requires]
-calc/0.1.2@kevin/dev
+calc/0.1.3@jason/dev
 
 [imports]
 include, *.h -> ./include
