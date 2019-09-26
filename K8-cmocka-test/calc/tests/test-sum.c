@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <setjmp.h>
 #include <cmocka.h>
-
+#include <stdio.h>
 #include "../src/calc.h"
 
 static void torture_sum_1_1(void **state) {
@@ -24,5 +24,10 @@ int main(void) {
 		cmocka_unit_test(torture_sum_3_5),
 	};
 
-	return cmocka_run_group_tests(tests, NULL, NULL);
+	if(!cmocka_run_group_tests(tests, NULL, NULL)){
+            printf("Test passed");
+        } else {
+            printf("Test failed");
+        }
+        return 0;
 }

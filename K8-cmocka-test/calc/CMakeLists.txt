@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
 PROJECT(cmocka-hello)
+
+include(CTest)
+
 ADD_DEFINITIONS(-Wall -Werror --std=gnu99 -Wmissing-declarations)
 
 SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/build/modules")
