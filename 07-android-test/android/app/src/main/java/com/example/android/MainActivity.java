@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         subtractTextView.setText("subtract(3, 2) = " + subtract(3, 2));
     }
 
-    public native int add(int a, int b);
+    public static native int add(int a, int b);
 
-    public native int subtract(int a, int b);
+    public static native int subtract(int a, int b);
 }
