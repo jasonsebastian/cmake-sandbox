@@ -13,6 +13,9 @@ SET(SOURCES
 	test-sum.c
 )
 
+find_program( MEMORYCHECK_COMMAND valgrind )
+set(MEMORYCHECK_COMMAND_OPTIONS "--trace-children=yes --leak-check=full")
+
 ADD_EXECUTABLE(test-sum ${SOURCES})
 
 FIND_PACKAGE(CMOCKA REQUIRED)

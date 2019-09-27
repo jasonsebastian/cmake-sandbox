@@ -15,6 +15,7 @@ class CalcConan(ConanFile):
         cmake.configure(source_folder="calc")
         cmake.build()
         cmake.test()
+        self.run("ctest -T memcheck")
 
     def package(self):
         self.copy("*.h", dst="include", src="hello")
