@@ -1,0 +1,35 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libstdc++
+    compiler.version=9.1
+    os=iOS
+
+[requires]
+    calc/0.1.7
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    arch_build=x86_64
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libstdc++
+    compiler.version=9.1
+    os=iOS
+    os_build=Macos
+
+[full_requires]
+    calc/0.1.7@jason/dev:2414c9717329edf4751eb3a6099c580a66d52168
+
+[full_options]
+    calc:shared=False
+
+[recipe_hash]
+
+
+[env]
+

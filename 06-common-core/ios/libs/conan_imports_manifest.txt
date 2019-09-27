@@ -1,0 +1,4 @@
+1569489818
+/Users/jason/Workspace/cmake-sandbox/06-common-core/ios/libs/include/add.h: 3b3aa9e37bada0be1f5b56210000a81c
+/Users/jason/Workspace/cmake-sandbox/06-common-core/ios/libs/include/subtract.h: 1181267ead31ccf3c32278a12e37c0fe
+/Users/jason/Workspace/cmake-sandbox/06-common-core/ios/libs/libcalc.dylib: b5a6ef3ba24d1d958cb4b2207c754c11

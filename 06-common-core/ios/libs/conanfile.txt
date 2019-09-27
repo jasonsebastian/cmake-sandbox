@@ -1,0 +1,6 @@
+[requires]
+calc/0.1.7@jason/dev
+
+[imports]
+include, *.h -> ./include
+ios_build, *.dylib -> ./

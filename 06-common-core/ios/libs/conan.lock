@@ -1,0 +1,19 @@
+{
+ "profile": "[settings]\narch=x86_64\narch_build=x86_64\nbuild_type=Release\ncompiler=apple-clang\ncompiler.libcxx=libstdc++\ncompiler.version=9.1\nos=iOS\nos_build=Macos\n[options]\n[build_requires]\n[env]\n",
+ "graph_lock": {
+  "nodes": {
+   "52a5930a-e03f-11e9-b278-10ddb1eb02a6": {
+    "pref": "calc/0.1.7@jason/dev#4d57500b6d78dc7e7f8f4f86becc0286:2414c9717329edf4751eb3a6099c580a66d52168#76b822cbf526f4920ba41c3710b6d64d",
+    "options": "shared=False"
+   },
+   "52a59508-e03f-11e9-b278-10ddb1eb02a6": {
+    "pref": null,
+    "options": "calc:shared=False",
+    "requires": {
+     "calc/0.1.7@jason/dev#4d57500b6d78dc7e7f8f4f86becc0286": "52a5930a-e03f-11e9-b278-10ddb1eb02a6"
+    }
+   }
+  }
+ },
+ "version": "0.1"
+}
