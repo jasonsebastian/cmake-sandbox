@@ -20,34 +20,36 @@ class CalcConan(ConanFile):
             self.android_abi = tools.to_android_abi(self.settings.arch)
 
     def build(self):
-        cmake = CMake(self)
-
-        if self.settings.os == 'Android':
-            if os.getenv('ANDROID_NDK_HOME', None) is None:
+        if self.settings.os == 'iOS':
+            flags = [
+                "-DCMAKE_SYSTEM_NAME=iOS",
+                '-DCMAKE_OSX_SYSROOT="/Applications/Xcode.app/Contents/Developer/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}.sdk"'.format(
+                    PLATFORM='iPhoneSimulator'),
+                '"-DCMAKE_OSX_ARCHITECTURES=armv7;armv7s;arm64;x86_64"',
+                '-DCMAKE_OSX_DEPLOYMENT_TARGET=11.4',
+                '-DCMAKE_IOS_INSTALL_COMBINED=YES'
+            ]
+            self.run("mv calc/* .")
+            self.run("cmake . -GXcode "+' '.join(flags))
+            self.run("cmake --build .")
+        else:
+            cmake = CMake(self)
+            if self.settings.os == 'Android':
+                if os.getenv('ANDROID_NDK_HOME', None) is None:
+                    raise ValueError(
+                        "Please set ANDROID_NDK_HOME environment variable")
+                cmake.definitions["ANDROID_ABI"] = self.android_abi
+                cmake.definitions["CMAKE_ANDROID_ARCH_ABI"] = self.android_abi
+                cmake.definitions["CMAKE_ANDROID_NDK"] = os.getenv(
+                    'ANDROID_NDK_HOME')
+            elif self.settings.os == 'Linux':
+                cmake.definitions["CMAKE_SYSTEM_PROCESSOR"] = "arm"
+            elif self.settings.os != 'Macos':
                 raise ValueError(
-                    "Please set ANDROID_NDK_HOME environment variable")
-            cmake.definitions["ANDROID_ABI"] = self.android_abi
-            cmake.definitions["CMAKE_ANDROID_ARCH_ABI"] = self.android_abi
-            cmake.definitions["CMAKE_ANDROID_NDK"] = os.getenv(
-                'ANDROID_NDK_HOME')
-        elif self.settings.os == 'Linux':
-            cmake.definitions["CMAKE_SYSTEM_PROCESSOR"] = "arm"
-        elif self.settings.os == 'iOS':
-            pass
-            # platform = "iPhoneSimulator"
-            # cmake.definitions["CMAKE_OSX_SYSROOT"] = \
-            #     "/Applications/Xcode.app/Contents/Developer/Platforms/{0}.platform/Developer/SDKs/{0}.sdk".format(
-            #         platform)
-            # cmake.definitions["CMAKE_OSX_ARCHITECTURES"] = "x86_64"
-            # cmake.definitions["CMAKE_OSX_DEPLOYMENT_TARGET"] = '11.4'
-            # for key, value in cmake.definitions.items():
-            #     print(key, value)
-        elif self.settings.os != 'Macos':
-            raise ValueError(
-                "Currently we only support build for Android, Linux, and Macos")
+                    "Currently we only support build for Android, Linux, and Macos")
 
-        cmake.configure(source_folder="calc")
-        cmake.build()
+            cmake.configure(source_folder="calc")
+            cmake.build()
 
     def package(self):
         if self.settings.os == 'Android':
