@@ -9,7 +9,7 @@ clean() {
 }
 
 clean
-conan create native jason/dev -p ios/libs/ios_profile
+conan create native jason/dev -s os=iOS -s os.version=11.4
 cd ios/libs
 pwd
-conan install . --build missing -p ios_profile
+conan install . --build missing -s os=iOS -s os.version=11.4
