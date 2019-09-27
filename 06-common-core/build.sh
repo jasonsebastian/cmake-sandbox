@@ -11,4 +11,5 @@ clean() {
 clean
 conan export native jason/dev
 cd ios/libs
-conan install . -s os=iOS --build missing
+pwd
+conan install . --build missing -p ios_profile
