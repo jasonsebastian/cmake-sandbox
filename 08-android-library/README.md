@@ -51,7 +51,7 @@ The build order is as follows:
 
 ## Commands
 
-Clean existing build results, then navigate to `library/android` and run
+Navigate to `library/android`, clean existing build results and run
 
 ```
 ./gradlew clean assembleDebug assembleRelease publishToMavenLocal
