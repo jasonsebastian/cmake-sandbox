@@ -8,6 +8,6 @@ clean() {
     popd
 }
 
-# clean
+clean
 # chmod +x gradlew
-./gradlew assembleDebug assembleRelease publishToMavenLocal
+./gradlew clean assembleDebug assembleRelease publishToMavenLocal
