@@ -69,16 +69,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
 
-task sourceJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-}
-
 publishing {
     publications {
         maven(MavenPublication) {
             groupId = 'com.example.androidlibrary'
             artifactId = 'calc'
-            version = '1.2'
+            version = '1.4'
             artifact("$buildDir/outputs/aar/android-release.aar")
         }
     }

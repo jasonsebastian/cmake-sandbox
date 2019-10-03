@@ -12,7 +12,7 @@ else()
 endif()
 
 execute_process(
-        COMMAND conan install . -s os=Android -s os.api_level=23 -s arch=${conan_arch} -o calc:shared=True --build missing
+        COMMAND conan install . -s os=Android -s os.api_level=23 -s arch=${conan_arch} --build
         WORKING_DIRECTORY ${distribution_DIR}
 )
 
