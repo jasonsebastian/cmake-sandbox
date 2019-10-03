@@ -53,11 +53,17 @@ The build order is as follows:
 Navigate to `library/android`, clean existing build results and run
 
 ```
-./gradlew clean assembleDebug assembleRelease publishToMavenLocal
+./gradlew clean assembleDebug assembleRelease
 ```
 
-After the artifacts are generated and packaged successfully, navigate to `sample/android` and run
+To publish to `mavenLocal`, run
 
 ```
-./gradlew build installDebug
+./gradlew publishToMavenLocal
+```
+
+After the artifacts are packaged successfully, navigate to `sample/android` and run
+
+```
+./gradlew installDebug
 ```
