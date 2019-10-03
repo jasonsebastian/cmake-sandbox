@@ -6,8 +6,7 @@
 ├── library
 │   ├── native
 │   │   ├── calc
-│   │   │   ├── include
-│   │   │   └── src
+│   │   │   └── CMakeLists.txt
 │   │   └── conanfile.py
 │   └── android
 │       ├── libs
