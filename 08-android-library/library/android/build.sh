@@ -10,4 +10,5 @@ clean() {
 
 clean
 # chmod +x gradlew
-./gradlew clean assembleDebug assembleRelease publishToMavenLocal
+./gradlew clean assembleDebug assembleRelease
+./gradlew publishToMavenLocal
