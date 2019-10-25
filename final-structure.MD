@@ -36,13 +36,37 @@
 │   │   │   └── libkeystore.a
 │   │   └── x86_64
 │   │       └── libkeystore.a
-│   └── osx
+│   ├── osx
+│   │   ├── include
+│   │   │   ├── keystore.h
+│   │   │   ├── ksdatahelper.h
+│   │   │   ├── ksdatatypes.h
+│   │   │   └── ksstatus.h
+│   │   └── libkeystore.a
+│   └── uwp
+│       ├── debug
+│       │   ├── ARM
+│       │   │   └── libkeystore.lib
+│       │   ├── ARM64
+│       │   │   └── libkeystore.lib
+│       │   ├── Win32
+│       │   │   └── libkeystore.lib
+│       │   └── x64
+│       │       └── libkeystore.lib
 │       ├── include
 │       │   ├── keystore.h
 │       │   ├── ksdatahelper.h
 │       │   ├── ksdatatypes.h
 │       │   └── ksstatus.h
-│       └── libkeystore.a
+│       └── release
+│           ├── ARM
+│           │   └── libkeystore.lib
+│           ├── ARM64
+│           │   └── libkeystore.lib
+│           ├── Win32
+│           │   └── libkeystore.lib
+│           └── x64
+│               └── libkeystore.lib
 ├── src
 │   ├── common
 │   │   ├── cryptowrapper.h
